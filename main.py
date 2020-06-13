@@ -55,7 +55,7 @@ class Pipeline(FlowSpec):
 
         sc = preprocessing.StandardScaler()
         self.X_train = sc.fit_transform(X_train)
-        self.X_test = sc.fit_transform(X_test)
+        self.X_test = sc.transform(X_test)
 
         self.next(self.train_model1, self.train_model2)
     
